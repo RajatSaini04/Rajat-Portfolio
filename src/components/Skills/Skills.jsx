@@ -98,7 +98,7 @@ const Skills = () => {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.3 }}
-                    className="flex items-center gap-2 bg-[#241d35] border border-gray-700 rounded-xl px-3 py-2 hover:border-purple-500 hover:shadow-md hover:shadow-purple-500/10 transition-all duration-300 group-hover:scale-[1.05]"
+                    className="flex flex-col items-center gap-2 bg-[#241d35] border border-gray-700 rounded-xl px-3 py-2 hover:border-purple-500 hover:shadow-md hover:shadow-purple-500/10 transition-all duration-300 group-hover:scale-[1.05] lg:flex-row"
                   >
                     <img
                       src={skill.logo}

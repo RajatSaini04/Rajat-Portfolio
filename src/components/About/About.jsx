@@ -5,6 +5,7 @@ import profileImage from '../../assets/rajat-new.png';
 import { motion } from 'framer-motion';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
+import '../About/About.css'
 
 AOS.init();
 
@@ -56,20 +57,27 @@ const About = () => {
             challenge!
           </p>
 
-          <motion.a
-            href="https://drive.google.com/file/d/1KuCxhiND6XE_pbGZc28DDYW4PRl1i22x/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block text-white py-3 px-8 rounded-full text-lg font-bold transition-transform duration-300 hover:scale-105"
-            whileHover={{ scale: 1.08 }}
-            style={{
-              background: 'linear-gradient(90deg, #8245ec, #a855f7)',
-              boxShadow:
-                '0 0 4px #8245ec, 0 0 8px #8245ec, 0 0 20px #a855f7',
-            }}
-          >
-            DOWNLOAD CV
-          </motion.a>
+          <div className="box inline-block">
+            {/* <div className="in"> */}
+              <motion.a
+                href="https://drive.google.com/file/d/1KuCxhiND6XE_pbGZc28DDYW4PRl1i22x/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="in inline-block text-white py-3 px-8 text-lg font-bold transition-transform duration-300 hover:scale-105"
+                whileHover={{ scale: 1.08 }}
+                style={{
+                  // background: 'linear-gradient(90deg, #8245ec, #a855f7)',
+                  // boxShadow:
+                    // '0 0 4px #8245ec, 0 0 8px #8245ec, 0 0 20px #a855f7',
+                }}
+              >
+                DOWNLOAD CV
+              </motion.a>
+            {/* </div> */}
+          </div>
+
+
+
         </motion.div>
 
         {/* === Right: Profile Image with Tilt === */}
@@ -89,7 +97,7 @@ const About = () => {
             transitionSpeed={1500}
             gyroscope={true}
           >
-            <img 
+            <img
               src={profileImage}
               alt="Rajat Image"
               className="w-full h-full object-cover scale-110 object-[90%_top] rounded-full drop-shadow-[0_10px_30px_rgba(130,69,236,0.5)]"

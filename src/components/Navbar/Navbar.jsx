@@ -64,7 +64,7 @@ const Navbar = () => {
   const menuItems = [
     { id: "about", label: "About" },
     { id: "skills", label: "Skills" },
-    { id: "experience", label: "Experience" },
+    // { id: "experience", label: "Experience" },
     // { id: "leetcode", label: "LeetCode" }, // ✅ Added
     { id: "work", label: "Projects" },
     { id: "education", label: "Education" },

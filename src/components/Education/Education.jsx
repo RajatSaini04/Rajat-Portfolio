@@ -34,12 +34,12 @@ const Education = () => {
             data-aos="fade-up"
             data-aos-delay={`${index * 150}`}
             data-aos-offset="250"
-            className={`relative flex flex-col sm:flex-row items-center gap-4 mb-20 z-10 ${
-              index % 2 === 0 ? "sm:justify-end" : "sm:justify-start"
+            className={`relative flex flex-col lg:flex-row items-center gap-4 mb-20 z-10 justify-end ${
+              index % 2 === 0 ? "lg:justify-end" : "lg:justify-start"
             }`}
           >
             {/* Timeline Dot */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 sm:w-16 sm:h-16 bg-gray-900 border-4 border-purple-500 rounded-full flex items-center justify-center z-20">
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 sm:w-16 sm:h-16 bg-gray-900 border-4 border-purple-500 rounded-full flex items-center justify-center z-20 ">
               <img
                 src={edu.img}
                 alt={edu.school}
@@ -49,9 +49,10 @@ const Education = () => {
 
             {/* Card */}
             <div
-              className={`w-full sm:max-w-[90%] md:max-w-[500px] p-6 sm:p-8 rounded-2xl shadow-xl  bg-gray-900 backdrop-blur-md transition-transform duration-300 hover:scale-105 ${
-                index % 2 === 0 ? "sm:ml-44" : "sm:mr-44"
-              } mt-16 sm:mt-0`}
+              className={`w-full sm:max-w-[90%] md:max-w-[500px] p-6 sm:p-8 rounded-2xl shadow-xl  bg-gray-900 backdrop-blur-md transition-transform duration-300 hover:scale-105
+                
+                 
+                mt-16 sm:mt-0`}
             >
               {/* Row */}
               <div className="flex flex-col sm:flex-row items-center sm:items-start sm:text-left gap-4">
@@ -71,13 +72,14 @@ const Education = () => {
                   </h3>
                   <h4 className="text-sm text-gray-300">{edu.school}</h4>
                   <p className="text-sm text-gray-500 mt-1">{edu.date}</p>
+                  <p className="mt-2 text-purple-400 font-semibold text-sm">
+                Grade: {edu.grade}
+              </p>
                 </div>
               </div>
 
               {/* Grade & Desc */}
-              <p className="mt-4 text-purple-400 font-semibold text-sm">
-                Grade: {edu.grade}
-              </p>
+              
               <p className="mt-2 text-gray-300 text-sm">{edu.desc}</p>
             </div>
           </div>

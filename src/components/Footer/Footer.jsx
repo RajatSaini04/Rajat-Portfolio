@@ -26,14 +26,14 @@ const Footer = () => {
     >
       <div className="text-center space-y-6">
         {/* Name / Logo */}
-        <h2 className="text-2xl font-bold text-purple-500 tracking-wide">Rajat Saini</h2>
+        <h2 className="text-2xl font-bold text-purple-500 tracking-wide">Rajat</h2>
 
         {/* Navigation Links */}
         <nav className="flex flex-wrap justify-center gap-4 text-sm sm:text-base font-medium">
           {[
             { name: "About", id: "about" },
             { name: "Skills", id: "skills" },
-            { name: "Experience", id: "experience" },
+            // { name: "Experience", id: "experience" },
             { name: "Projects", id: "projects" },
             { name: "Education", id: "education" },
           ].map((item, index) => (
