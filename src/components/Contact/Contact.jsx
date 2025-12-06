@@ -22,7 +22,7 @@ const Contact = () => {
         "service_7xxnsh9",
         "template_0adrom8",
         form.current,
-        "le8zFy7MZ1zx2xDBq"
+        "ps8TchkDH5fXLgVQ7"
       )
       .then(() => {
         setIsSent(true);
@@ -31,6 +31,7 @@ const Contact = () => {
           position: "top-right",
           autoClose: 3000,
           theme: "dark",
+          style:{marginTop: "60px"}
         });
       })
       .catch((error) => {
@@ -39,6 +40,7 @@ const Contact = () => {
           position: "top-right",
           autoClose: 3000,
           theme: "dark",
+          style:{marginTop: "60px"}
         });
       });
   };
