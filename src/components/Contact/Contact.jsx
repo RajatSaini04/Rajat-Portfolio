@@ -48,10 +48,10 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="relative z-10 py-24 px-6 md:px-12 lg:px-32 bg-[#0d081f] overflow-hidden"
+      className="relative z-10 py-24 px-6 md:px-12 lg:px-32 bg-[#080d1f] overflow-hidden"
     >
       {/* Background Blur Blob */}
-      <div className="absolute -top-32 -left-20 w-[400px] h-[400px] rounded-full bg-purple-500 opacity-20 blur-3xl animate-blob" />
+      <div className="absolute -top-32 -left-20 w-[400px] h-[400px] rounded-full bg-blue-500 opacity-20 blur-3xl animate-blob" />
 
       <ToastContainer />
 
@@ -65,7 +65,7 @@ const Contact = () => {
         <h2 className="text-4xl md:text-5xl font-extrabold text-white">
           Let's Connect
         </h2>
-        <div className="w-20 h-1 bg-purple-500 mx-auto mt-4 rounded-full" />
+        <div className="w-20 h-1 bg-blue-500 mx-auto mt-4 rounded-full" />
         <p className="text-gray-400 mt-4 text-lg max-w-2xl mx-auto">
           I’d love to hear from you—reach out for collaborations, queries or just a hello!
         </p>
@@ -98,7 +98,7 @@ const Contact = () => {
                 name={input.name}
                 required
                 placeholder={input.placeholder}
-                className="w-full p-3 rounded-lg bg-[#1c1830] text-white border border-gray-600 focus:border-purple-500 focus:outline-none transition"
+                className="w-full p-3 rounded-lg bg-[#1c1830] text-white border border-gray-600 focus:border-blue-500 focus:outline-none transition"
               />
             </motion.div>
           ))}
@@ -113,7 +113,7 @@ const Contact = () => {
               placeholder="Your Message"
               rows="5"
               required
-              className="w-full p-3 rounded-lg bg-[#1c1830] text-white border border-gray-600 focus:border-purple-500 focus:outline-none transition"
+              className="w-full p-3 rounded-lg bg-[#1c1830] text-white border border-gray-600 focus:border-blue-500 focus:outline-none transition"
             />
           </motion.div>
 
@@ -122,7 +122,7 @@ const Contact = () => {
             whileHover={{ scale: 1.02 }}
             transition={{ type: "spring", stiffness: 200 }}
             type="submit"
-            className="w-full py-3 font-semibold bg-gradient-to-r from-purple-600 to-pink-500 text-white rounded-lg shadow-lg hover:shadow-purple-500/30 transition-all duration-300"
+            className="w-full py-3 font-semibold bg-gradient-to-r from-blue-600 to-blue-900 text-white rounded-lg shadow-lg hover:shadow-blue-500/30 transition-all duration-300"
           >
             Send Message ✉️
           </motion.button>

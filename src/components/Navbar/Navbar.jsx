@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
-import { FiMenu, FiX } from "react-icons/fi";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FiX } from "react-icons/fi";
+import { RiMenu4Line } from "react-icons/ri";
+import { FiGithub, FiLinkedin } from "react-icons/fi";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -71,108 +72,108 @@ const Navbar = () => {
   ];
 
   return (
-    <nav
-      className={`fixed top-0 w-full z-50 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[20vw] ${
-        isScrolled ? "bg-[#050414] bg-opacity-50 backdrop-blur-md shadow-md" : "bg-transparent"
-      }`}
-      data-aos="fade-down"
-    >
-      <div className="text-white py-5 flex justify-between items-center">
-        {/* Logo */}
-        <div className="text-lg font-semibold cursor-pointer">
-          <span className="text-[#8245ec]">&lt;</span>
-          <span className="text-white">Rajat </span>
-          <span className="text-[#8245ec]">/</span>
-          {/* <span className="text-white">Shukla</span> */}
-          <span className="text-[#8245ec]">&gt;</span>
-        </div>
+    <>
+      <nav
+        className={`fixed top-0 w-full z-50 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[20vw] ${isScrolled ? "bg-[#050414] bg-opacity-50 backdrop-blur-md shadow-md" : "bg-transparent"
+          }`}
+        data-aos="fade-down"
+      >
+        <div className="text-white py-5 flex justify-between items-center">
+          {/* Logo */}
+          <div className="text-lg font-semibold cursor-pointer">
+            <span className="text-[#11b7ff]">&lt; </span>
+            <span className="text-white font-normal tracking-wide">Rajat </span>
+            <span className="text-[#11b7ff]">/</span>
+            <span className="text-white font-normal tracking-wide"> Saini </span>
+            <span className="text-[#11b7ff]">&gt;</span>
+          </div>
 
-        {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-8 text-gray-300">
-          {menuItems.map((item) => (
-            <li
-              key={item.id}
-              className={`cursor-pointer hover:text-[#8245ec] transition ${
-                activeSection === item.id ? "text-[#8245ec] font-medium" : ""
-              }`}
+          {/* Desktop Menu */}
+          <ul className="hidden md:flex space-x-8 text-gray-300">
+            {menuItems.map((item) => (
+              <li
+                key={item.id}
+                className={`cursor-pointer hover:text-[#11b7ff] transition ${activeSection === item.id ? "text-[#11b7ff] font-medium" : ""
+                  }`}
+              >
+                <button onClick={() => handleMenuItemClick(item.id)}>{item.label}</button>
+              </li>
+            ))}
+          </ul>
+
+          {/* Social Icons */}
+          <div className="hidden md:flex space-x-4">
+            <a
+              href="https://github.com/RajatSaini04"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-300 hover:text-[#11b7ff]"
             >
-              <button onClick={() => handleMenuItemClick(item.id)}>{item.label}</button>
-            </li>
-          ))}
-        </ul>
+              <FiGithub size={24} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/rajat-saini-2092a62ba/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-300 hover:text-[#11b7ff]"
+            >
+              <FiLinkedin size={24} />
+            </a>
+          </div>
 
-        {/* Social Icons */}
-        <div className="hidden md:flex space-x-4">
-          <a
-            href="https://github.com/RajatSaini04"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-300 hover:text-[#8245ec]"
-          >
-            <FaGithub size={24} />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/rajat-saini-2092a62ba/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-300 hover:text-[#8245ec]"
-          >
-            <FaLinkedin size={24} />
-          </a>
+          {/* Mobile Menu Icon */}
+          <div className="md:hidden">
+            {isOpen ? (
+              <FiX
+                className="text-3xl text-[#11b7ff] cursor-pointer"
+                onClick={() => setIsOpen(false)}
+              />
+            ) : (
+              <RiMenu4Line
+                className="text-3xl text-[#11b7ff] cursor-pointer"
+                onClick={() => setIsOpen(true)}
+              />
+            )}
+          </div>
         </div>
 
-        {/* Mobile Menu Icon */}
-        <div className="md:hidden">
-          {isOpen ? (
-            <FiX
-              className="text-3xl text-[#8245ec] cursor-pointer"
-              onClick={() => setIsOpen(false)}
-            />
-          ) : (
-            <FiMenu
-              className="text-3xl text-[#8245ec] cursor-pointer"
-              onClick={() => setIsOpen(true)}
-            />
-          )}
-        </div>
-      </div>
 
+      </nav>
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-4/5 bg-[#050414] bg-opacity-50 backdrop-filter backdrop-blur-lg z-50 rounded-lg shadow-lg md:hidden">
+        <div className="fixed top-16 left-1/2 transform -translate-x-1/2 w-full bg-[#050414] bg-opacity-50 backdrop-filter backdrop-blur-md z-50 rounded-lg shadow-lg md:hidden">
           <ul className="flex flex-col items-center space-y-4 py-4 text-gray-300">
             {menuItems.map((item) => (
               <li
                 key={item.id}
-                className={`cursor-pointer hover:text-white transition ${
-                  activeSection === item.id ? "text-[#8245ec]" : ""
-                }`}
+                className={`cursor-pointer hover:text-white transition ${activeSection === item.id ? "text-[#11b7ff]" : ""
+                  }`}
               >
                 <button onClick={() => handleMenuItemClick(item.id)}>{item.label}</button>
               </li>
             ))}
             <div className="flex space-x-4">
               <a
-                href="https://github.com/Harsh-shuklaa"
+                href="https://github.com/RajatSaini04"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white"
               >
-                <FaGithub size={24} />
+                <FiGithub size={24} />
               </a>
               <a
-                href="https://www.linkedin.com/in/harsh-shukla-2b60142b1/"
+                href="https://www.linkedin.com/in/rajat-saini-2092a62ba/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white"
               >
-                <FaLinkedin size={24} />
+                <FiLinkedin size={24} />
               </a>
             </div>
           </ul>
         </div>
       )}
-    </nav>
+    </>
   );
 };
 

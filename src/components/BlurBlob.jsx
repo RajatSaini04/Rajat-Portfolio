@@ -36,7 +36,7 @@ const BlurBlob = ({ position = {}, size = {} }) => {
         transform: 'translate(-50%, -50%)',
       }}
     >
-      <div className="w-full h-full bg-purple-500 rounded-full opacity-20 blur-3xl" />
+      <div className="w-full h-full bg-blue-700 rounded-full opacity-10 blur-3xl" />
     </motion.div>
   );
 };

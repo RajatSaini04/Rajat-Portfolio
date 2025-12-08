@@ -17,7 +17,7 @@ const Education = () => {
       {/* Section Title */}
       <div className="text-center mb-16" data-aos="fade-up" data-aos-offset="200">
         <h2 className="text-4xl font-bold text-white">EDUCATION</h2>
-        <div className="w-24 h-1 bg-purple-500 mx-auto mt-4"></div>
+        <div className="w-24 h-1 bg-blue-500 mx-auto mt-4"></div>
         <p className="text-gray-400 mt-5 text-base sm:text-lg font-medium max-w-2xl mx-auto">
           My education has been a journey of learning and development. Here are the details of my academic background.
         </p>
@@ -39,7 +39,7 @@ const Education = () => {
             }`}
           >
             {/* Timeline Dot */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 sm:w-16 sm:h-16 bg-gray-900 border-4 border-purple-500 rounded-full flex items-center justify-center z-20 ">
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 sm:w-16 sm:h-16 bg-gray-900 border-4 border-blue-500 rounded-full flex items-center justify-center z-20 ">
               <img
                 src={edu.img}
                 alt={edu.school}
@@ -72,7 +72,7 @@ const Education = () => {
                   </h3>
                   <h4 className="text-sm text-gray-300">{edu.school}</h4>
                   <p className="text-sm text-gray-500 mt-1">{edu.date}</p>
-                  <p className="mt-2 text-purple-400 font-semibold text-sm">
+                  <p className="mt-2 text-blue-400 font-semibold text-sm">
                 Grade: {edu.grade}
               </p>
                 </div>

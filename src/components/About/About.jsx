@@ -33,46 +33,54 @@ const About = () => {
             Hi, I am
           </h1>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">
-            Rajat
+            Rajat Saini
           </h2>
 
-          <h3 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-6 text-[#8245ec]">
+          <h3 className="text-xl sm:text-2xl lg:text-2xl font-semibold mb-6 text-[#11b7ff]">
             <span className="text-white">I am a </span>
             <ReactTypingEffect
-              text={['Fullstack Developer', 'Web Developer', 'Coder']}
+              text={['Fullstack Developer', 'Web Developer']}
               speed={100}
               eraseSpeed={60}
               typingDelay={500}
               eraseDelay={2000}
               cursorRenderer={(cursor) => (
-                <span className="text-[#8245ec]">{cursor}</span>
+                <span className="text-[#c6eeff]">{cursor}</span>
               )}
             />
           </h3>
 
-          <p className="text-base sm:text-lg text-gray-400 leading-relaxed mb-8">
-            A tech enthusiast who loves building things with code. I enjoy
-            solving problems, learning new tools, and turning ideas into
-            real-world projects. Currently exploring DSA and always up for a
-            challenge!
-          </p>
+          <div className="text-base italic sm:text-lg text-gray-400 leading-relaxed mb-8">
+            <p>
+              Learning — Picking up new skills every day.
+            </p>
+            <p>
+              Building — Creating projects that matter.
+            </p>
+            <p>
+              Breaking — Pushing code to its limits.
+            </p>
+            <p>
+              Fixing — Making things work again.
+            </p>
+          </div>
 
           <div className="box inline-block">
             {/* <div className="in"> */}
-              <motion.a
-                href="https://drive.google.com/file/d/1KuCxhiND6XE_pbGZc28DDYW4PRl1i22x/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="in inline-block text-white py-3 px-8 text-lg font-bold transition-transform duration-300 hover:scale-105"
-                whileHover={{ scale: 1.08 }}
-                style={{
-                  // background: 'linear-gradient(90deg, #8245ec, #a855f7)',
-                  // boxShadow:
-                    // '0 0 4px #8245ec, 0 0 8px #8245ec, 0 0 20px #a855f7',
-                }}
-              >
-                DOWNLOAD CV
-              </motion.a>
+            <motion.a
+              href="https://drive.google.com/file/d/1KuCxhiND6XE_pbGZc28DDYW4PRl1i22x/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="in inline-block text-center text-white py-3 px-8 text-lg font-bold transition-transform duration-300 hover:scale-102"
+              whileHover={{ scale: 1.02 }}
+              style={{
+                // background: 'linear-gradient(90deg, #8245ec, #a855f7)',
+                // boxShadow:
+                // '0 0 4px #8245ec, 0 0 8px #8245ec, 0 0 20px #a855f7',
+              }}
+            >
+              Download CV
+            </motion.a>
             {/* </div> */}
           </div>
 
@@ -89,7 +97,7 @@ const About = () => {
           viewport={{ once: true }}
         >
           <Tilt
-            className="w-52 h-52 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-[26rem] lg:h-[26rem] border-4 border-purple-700 rounded-full overflow-hidden"
+            className="w-52 h-52 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-[26rem] lg:h-[26rem] border-4 border-blue-600 rounded-full overflow-hidden"
             tiltMaxAngleX={20}
             tiltMaxAngleY={20}
             perspective={1200}

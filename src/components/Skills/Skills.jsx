@@ -48,11 +48,11 @@ const Skills = () => {
     >
       {/* Header */}
       <motion.div variants={fadeInUp} className="text-center mb-20">
-        <motion.h2 className="text-4xl font-extrabold tracking-tight text-white">
+        <motion.h2 className="text-4xl font-extrabold tracking-wide text-white">
           SKILLS
         </motion.h2>
         <motion.div
-          className="w-24 h-1 bg-[#8245ec] mx-auto mt-3 rounded"
+          className="w-24 h-1 bg-[#11b7ff] mx-auto mt-3 rounded"
           variants={fadeInUp}
           transition={{ delay: 0.2 }}
         />
@@ -83,7 +83,7 @@ const Skills = () => {
               scale={1.05}
               transitionSpeed={1500}
               gyroscope={true}
-              className="bg-[#1a162a] group hover:shadow-[0_0_30px_5px_rgba(130,69,236,0.2)] transition-all duration-500 ease-in-out rounded-2xl p-6 border border-[#2e2b3f] backdrop-blur-xl"
+              className="bg-[#1a162a] group hover:shadow-[0_0_30px_5px_rgba(69,191,236,0.2)] transition-all duration-500 ease-in-out rounded-2xl p-6 border border-[#2e2b3f] backdrop-blur-xl"
             >
               <h3 className="text-2xl font-semibold text-white mb-6 text-center border-b border-[#333] pb-3">
                 {category.title}
@@ -98,7 +98,7 @@ const Skills = () => {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.3 }}
-                    className="flex flex-col items-center gap-2 bg-[#241d35] border border-gray-700 rounded-xl px-3 py-2 hover:border-purple-500 hover:shadow-md hover:shadow-purple-500/10 transition-all duration-300 group-hover:scale-[1.05] lg:flex-row"
+                    className="flex flex-col items-center gap-2 bg-[#241d35] border border-gray-700 rounded-xl px-3 py-2 hover:border-blue-500 hover:shadow-md hover:shadow-purple-500/10 transition-all duration-300 group-hover:scale-[1.05] lg:flex-row"
                   >
                     <img
                       src={skill.logo}

@@ -2,7 +2,7 @@
   /* height: 400px; */
   width: 220px;
   /* background-color: #2f2f2f; */
-  padding: 5px;
+  padding: 4px;
   position: relative;
   overflow: hidden;
   /* border-radius: 10px; */
@@ -27,9 +27,14 @@
   transform: translate(-50%, -50%) rotate(75deg);
   height: 300px;
   width: 40px;
-  background-color: #a85af7;
+  background-color: #11b7ff ;
   animation: bordermove 3s infinite ease;
 }
+
+.box::after, .box::before{
+  filter: blur(15px);
+}
+
 
 @keyframes bordermove {
   100% {

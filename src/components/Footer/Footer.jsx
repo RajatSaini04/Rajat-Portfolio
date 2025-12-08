@@ -1,5 +1,5 @@
 import React from "react";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FiLinkedin , FiGithub } from "react-icons/fi";
 import { motion } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -26,7 +26,7 @@ const Footer = () => {
     >
       <div className="text-center space-y-6">
         {/* Name / Logo */}
-        <h2 className="text-2xl font-bold text-blue-500 tracking-wide">Rajat</h2>
+        <h2 className="text-2xl font-bold text-blue-500 tracking-wide">Rajat Saini</h2>
 
         {/* Navigation Links */}
         <nav className="flex flex-wrap justify-center gap-4 text-sm sm:text-base font-medium">
@@ -40,7 +40,7 @@ const Footer = () => {
             <button
               key={index}
               onClick={() => handleScroll(item.id)}
-              className="text-gray-300 hover:text-purple-500 transition-colors duration-300 px-2 py-1 hover:underline underline-offset-4"
+              className="text-gray-300 hover:text-blue-500 transition-colors duration-300 px-2 py-1 hover:underline underline-offset-4"
             >
               {item.name}
             </button>
@@ -50,15 +50,15 @@ const Footer = () => {
         {/* Social Icons */}
         <div className="flex justify-center gap-6 text-2xl text-gray-300 mt-4">
           {[
-            { icon: <FaLinkedin />, link: "https://www.linkedin.com/in/rajat-saini-2092a62ba/" },
-            { icon: <FaGithub />, link: "https://github.com/RajatSaini04" },
+            { icon: <FiLinkedin  />, link: "https://www.linkedin.com/in/rajat-saini-2092a62ba/" },
+            { icon: <FiGithub />, link: "https://github.com/RajatSaini04" },
           ].map((item, index) => (
             <a
               key={index}
               href={item.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-purple-500 transform hover:scale-110 transition duration-300"
+              className="hover:text-blue-500 transform hover:scale-110 transition duration-300"
             >
               {item.icon}
             </a>
@@ -70,7 +70,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <p className="text-sm text-gray-500 mt-4">
-          © 2025 <span className="text-purple-400 font-semibold">Rajat Saini</span>. All rights reserved.
+          © 2025 <span className="text-blue-400 font-semibold">Rajat Saini</span>. All rights reserved.
         </p>
       </div>
     </motion.footer>
