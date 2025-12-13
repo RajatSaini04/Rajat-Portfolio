@@ -9,7 +9,9 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   const [isScrolled, setIsScrolled] = useState(false);
+
   const sectionRefs = useRef({});
+  const mobileMenuRef = useRef(null); // ✅ NEW
 
   // Init AOS
   useEffect(() => {
@@ -53,6 +55,32 @@ const Navbar = () => {
     };
   }, []);
 
+  // ✅ Close mobile menu on outside click
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (
+        isOpen &&
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(e.target)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [isOpen]);
+
+  // ✅ Close mobile menu on scroll
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const closeOnScroll = () => setIsOpen(false);
+    window.addEventListener("scroll", closeOnScroll);
+
+    return () => window.removeEventListener("scroll", closeOnScroll);
+  }, [isOpen]);
+
   // Scroll to section on click
   const handleMenuItemClick = (sectionId) => {
     setIsOpen(false);
@@ -65,8 +93,6 @@ const Navbar = () => {
   const menuItems = [
     { id: "about", label: "About" },
     { id: "skills", label: "Skills" },
-    // { id: "experience", label: "Experience" },
-    // { id: "leetcode", label: "LeetCode" }, // ✅ Added
     { id: "work", label: "Projects" },
     { id: "education", label: "Education" },
   ];
@@ -74,8 +100,11 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`fixed top-0 w-full z-50 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[20vw] ${isScrolled ? "bg-[#050414] bg-opacity-50 backdrop-blur-md shadow-md" : "bg-transparent"
-          }`}
+        className={`fixed top-0 w-full z-50 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[20vw] ${
+          isScrolled
+            ? "bg-[#050414] bg-opacity-50 backdrop-blur-md shadow-md"
+            : "bg-transparent"
+        }`}
         data-aos="fade-down"
       >
         <div className="text-white py-5 flex justify-between items-center">
@@ -93,10 +122,15 @@ const Navbar = () => {
             {menuItems.map((item) => (
               <li
                 key={item.id}
-                className={`cursor-pointer hover:text-[#11b7ff] transition ${activeSection === item.id ? "text-[#11b7ff] font-medium" : ""
-                  }`}
+                className={`cursor-pointer hover:text-[#11b7ff] transition ${
+                  activeSection === item.id
+                    ? "text-[#11b7ff] font-medium"
+                    : ""
+                }`}
               >
-                <button onClick={() => handleMenuItemClick(item.id)}>{item.label}</button>
+                <button onClick={() => handleMenuItemClick(item.id)}>
+                  {item.label}
+                </button>
               </li>
             ))}
           </ul>
@@ -136,20 +170,25 @@ const Navbar = () => {
             )}
           </div>
         </div>
-
-
       </nav>
+
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="fixed top-16 left-1/2 transform -translate-x-1/2 w-full bg-[#050414] bg-opacity-50 backdrop-filter backdrop-blur-md z-50 rounded-lg shadow-lg md:hidden">
+        <div
+          ref={mobileMenuRef} // ✅ attached here
+          className="fixed top-16 left-1/2 transform -translate-x-1/2 w-full bg-[#050414] bg-opacity-50 backdrop-filter backdrop-blur-md z-50 rounded-lg shadow-lg md:hidden"
+        >
           <ul className="flex flex-col items-center space-y-4 py-4 text-gray-300">
             {menuItems.map((item) => (
               <li
                 key={item.id}
-                className={`cursor-pointer hover:text-white transition ${activeSection === item.id ? "text-[#11b7ff]" : ""
-                  }`}
+                className={`cursor-pointer hover:text-white transition ${
+                  activeSection === item.id ? "text-[#11b7ff]" : ""
+                }`}
               >
-                <button onClick={() => handleMenuItemClick(item.id)}>{item.label}</button>
+                <button onClick={() => handleMenuItemClick(item.id)}>
+                  {item.label}
+                </button>
               </li>
             ))}
             <div className="flex space-x-4">

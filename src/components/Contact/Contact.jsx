@@ -51,7 +51,7 @@ const Contact = () => {
       className="relative z-10 py-24 px-6 md:px-12 lg:px-32 bg-[#080d1f] overflow-hidden"
     >
       {/* Background Blur Blob */}
-      <div className="absolute -top-32 -left-20 w-[400px] h-[400px] rounded-full bg-blue-500 opacity-20 blur-3xl animate-blob" />
+      <div className="absolute -top-32 -left-20 w-[400px] h-[400px] rounded-full bg-[#00b2d320]  blur-3xl animate-blob" />
 
       <ToastContainer />
 

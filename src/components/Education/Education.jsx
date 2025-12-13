@@ -11,7 +11,7 @@ const Education = () => {
   return (
     <section
       id="education"
-      className="py-24 px-6 md:px-12 lg:px-[16vw] font-sans bg-skills-gradient clip-path-custom-3"
+      className="py-24 px-6 md:px-12 lg:px-[12vw] xl:px-[15vw] font-sans bg-skills-gradient clip-path-custom-3"
       data-aos="fade-up"
     >
       {/* Section Title */}
@@ -24,7 +24,7 @@ const Education = () => {
       </div>
 
       {/* Timeline Wrapper */}
-      <div className="relative">
+      <div className="relative ">
         {/* Vertical Line */}
         <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-white/20 h-full z-0" />
 
@@ -34,12 +34,13 @@ const Education = () => {
             data-aos="fade-up"
             data-aos-delay={`${index * 150}`}
             data-aos-offset="250"
-            className={`relative flex flex-col lg:flex-row items-center gap-4 mb-20 z-10 justify-end ${
-              index % 2 === 0 ? "lg:justify-end" : "lg:justify-start"
+            className={`relative flex flex-col sm:flex-row items-center gap-4 mb-20 z-10 ${
+              index % 2 === 0 ? "sm:justify-end" : "sm:justify-start"
             }`}
           >
             {/* Timeline Dot */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 sm:w-16 sm:h-16 bg-gray-900 border-4 border-blue-500 rounded-full flex items-center justify-center z-20 ">
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 sm:w-14 sm:h-14 bg-gray-900 border-4 border-blue-500 rounded-full flex items-center justify-center z-20
+            sm:top-[-35px] xl:top-auto">
               <img
                 src={edu.img}
                 alt={edu.school}
@@ -49,10 +50,7 @@ const Education = () => {
 
             {/* Card */}
             <div
-              className={`w-full sm:max-w-[90%] md:max-w-[500px] p-6 sm:p-8 rounded-2xl shadow-xl  bg-gray-900 backdrop-blur-md transition-transform duration-300 hover:scale-105
-                
-                 
-                mt-16 sm:mt-0`}
+              className={`w-full sm:max-w-[90%] md:max-w-[500px] p-6 sm:p-8 rounded-2xl shadow-xl  bg-gray-900 backdrop-blur-md transition-transform duration-300 hover:scale-105 mt-16 sm:mt-0`}
             >
               {/* Row */}
               <div className="flex flex-col sm:flex-row items-center sm:items-start sm:text-left gap-4">
@@ -79,7 +77,6 @@ const Education = () => {
               </div>
 
               {/* Grade & Desc */}
-              
               <p className="mt-2 text-gray-300 text-sm">{edu.desc}</p>
             </div>
           </div>

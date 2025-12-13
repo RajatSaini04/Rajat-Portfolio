@@ -16,7 +16,7 @@ const About = () => {
       className="py-20 px-6 sm:px-[8vw] lg:px-[18vw] font-sans"
     >
       <div
-        className="flex flex-col-reverse lg:flex-row items-center gap-14 lg:gap-24"
+        className="flex flex-col-reverse lg:flex-row items-center gap-14 lg:gap-16"
         data-aos="fade-up"
         data-aos-duration="1200"
         data-aos-once="true"
@@ -29,17 +29,17 @@ const About = () => {
           transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-2">
+          <h1 className="text-3xl sm:text-4xl xl:text-5xl font-bold text-white mb-2">
             Hi, I am
           </h1>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">
+          <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-white mb-4">
             Rajat Saini
           </h2>
 
-          <h3 className="text-xl sm:text-2xl lg:text-2xl font-semibold mb-6 text-[#11b7ff]">
+          <h3 className="text-xl sm:text-2xl lg:text-2xl font-semibold mb-6 text-[#11b7ff] lg:flex lg:flex-col xl:flex-row xl:gap-2">
             <span className="text-white">I am a </span>
             <ReactTypingEffect
-              text={['Fullstack Developer', 'Web Developer']}
+              text={[' Fullstack Developer', 'Web Developer']}
               speed={100}
               eraseSpeed={60}
               typingDelay={500}
