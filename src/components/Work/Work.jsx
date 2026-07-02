@@ -42,7 +42,7 @@ const Work = () => {
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-48 object-cover rounded-xl"
+                className="w-full h-48 object-cover rounded-xl object-right"
               />
             </div>
             <div className="px-6 py-2">
