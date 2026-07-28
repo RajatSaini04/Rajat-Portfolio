@@ -70,7 +70,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <p className="text-sm text-gray-500 mt-4">
-          © 2025 <span className="text-blue-400 font-semibold">Rajat Saini</span>. All rights reserved.
+          © 2026 <span className="text-blue-400 font-semibold">Rajat Saini</span>. All rights reserved.
         </p>
       </div>
     </motion.footer>
